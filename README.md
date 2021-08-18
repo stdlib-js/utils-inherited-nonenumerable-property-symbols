@@ -224,7 +224,7 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 [ecma-262-for-in]: http://www.ecma-international.org/ecma-262/5.1/#sec-12.6.4
 
-[@stdlib/symbol/ctor]: https://github.com/stdlib-js/stdlib
+[@stdlib/symbol/ctor]: https://github.com/stdlib-js/symbol-ctor
 
 </section>
 
