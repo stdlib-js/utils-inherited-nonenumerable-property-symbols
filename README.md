@@ -35,7 +35,23 @@ limitations under the License.
 
 > Return an array of an object's inherited non-enumerable [symbol][@stdlib/symbol/ctor] properties.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-inherited-nonenumerable-property-symbols
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
@@ -43,37 +59,15 @@ limitations under the License.
 
 <!-- eslint-disable id-length -->
 
-To use in Observable,
-
 ```javascript
-inheritedNonEnumerablePropertySymbols = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-nonenumerable-property-symbols@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var inheritedNonEnumerablePropertySymbols = require( 'path/to/vendor/umd/utils-inherited-nonenumerable-property-symbols/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-nonenumerable-property-symbols@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.inheritedNonEnumerablePropertySymbols;
-})();
-</script>
+var inheritedNonEnumerablePropertySymbols = require( '@stdlib/utils-inherited-nonenumerable-property-symbols' );
 ```
 
 #### inheritedNonEnumerablePropertySymbols( obj\[, level] )
 
 Returns an `array` of an object's inherited non-enumerable [symbol][@stdlib/symbol/ctor] properties.
+
+<!-- eslint-disable id-length -->
 
 ```javascript
 var defineProperty = require( '@stdlib/utils-define-property' );
@@ -111,6 +105,8 @@ symbols = inheritedNonEnumerablePropertySymbols( f );
 
 By default, the function walks an object's entire prototype chain. To limit the inheritance level, provide a `level` argument.
 
+<!-- eslint-disable id-length -->
+
 ```javascript
 var symbols = inheritedNonEnumerablePropertySymbols( [], 1 );
 ```
@@ -137,16 +133,11 @@ var symbols = inheritedNonEnumerablePropertySymbols( [], 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-property@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-symbol-support@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/symbol-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-inherited-nonenumerable-property-symbols@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var defineProperty = require( '@stdlib/utils-define-property' );
+var hasSymbolSupport = require( '@stdlib/assert-has-symbol-support' );
+var Symbol = require( '@stdlib/symbol-ctor' );
+var inheritedNonEnumerablePropertySymbols = require( '@stdlib/utils-inherited-nonenumerable-property-symbols' );
 
 var hasSymbols = hasSymbolSupport();
 var symbols;
@@ -193,11 +184,6 @@ obj = new Foo();
 symbols = inheritedNonEnumerablePropertySymbols( obj );
 
 console.log( symbols );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -243,11 +229,6 @@ For more information on the project, filing bug reports and feature requests, an
 
 ---
 
-## License
-
-See [LICENSE][stdlib-license].
-
-
 ## Copyright
 
 Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
@@ -291,27 +272,25 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [esm-url]: https://github.com/stdlib-js/utils-inherited-nonenumerable-property-symbols/tree/esm
 [branches-url]: https://github.com/stdlib-js/utils-inherited-nonenumerable-property-symbols/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-inherited-nonenumerable-property-symbols/main/LICENSE
-
 [ecma-262-for-in]: https://262.ecma-international.org/5.1/#sec-12.6.4
 
-[@stdlib/symbol/ctor]: https://github.com/stdlib-js/symbol-ctor/tree/umd
+[@stdlib/symbol/ctor]: https://github.com/stdlib-js/symbol-ctor
 
 <!-- <related-links> -->
 
-[@stdlib/utils/inherited-nonenumerable-properties]: https://github.com/stdlib-js/utils-inherited-nonenumerable-properties/tree/umd
+[@stdlib/utils/inherited-nonenumerable-properties]: https://github.com/stdlib-js/utils-inherited-nonenumerable-properties
 
-[@stdlib/utils/inherited-nonenumerable-property-names]: https://github.com/stdlib-js/utils-inherited-nonenumerable-property-names/tree/umd
+[@stdlib/utils/inherited-nonenumerable-property-names]: https://github.com/stdlib-js/utils-inherited-nonenumerable-property-names
 
-[@stdlib/utils/nonenumerable-properties]: https://github.com/stdlib-js/utils-nonenumerable-properties/tree/umd
+[@stdlib/utils/nonenumerable-properties]: https://github.com/stdlib-js/utils-nonenumerable-properties
 
-[@stdlib/utils/nonenumerable-property-names]: https://github.com/stdlib-js/utils-nonenumerable-property-names/tree/umd
+[@stdlib/utils/nonenumerable-property-names]: https://github.com/stdlib-js/utils-nonenumerable-property-names
 
-[@stdlib/utils/nonenumerable-property-symbols]: https://github.com/stdlib-js/utils-nonenumerable-property-symbols/tree/umd
+[@stdlib/utils/nonenumerable-property-symbols]: https://github.com/stdlib-js/utils-nonenumerable-property-symbols
 
-[@stdlib/utils/nonenumerable-property-symbols-in]: https://github.com/stdlib-js/utils-nonenumerable-property-symbols-in/tree/umd
+[@stdlib/utils/nonenumerable-property-symbols-in]: https://github.com/stdlib-js/utils-nonenumerable-property-symbols-in
 
-[@stdlib/utils/property-symbols]: https://github.com/stdlib-js/utils-property-symbols/tree/umd
+[@stdlib/utils/property-symbols]: https://github.com/stdlib-js/utils-property-symbols
 
 <!-- </related-links> -->
 
