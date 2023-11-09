@@ -67,6 +67,8 @@ var inheritedNonEnumerablePropertySymbols = require( '@stdlib/utils-inherited-no
 
 Returns an `array` of an object's inherited non-enumerable [symbol][@stdlib/symbol/ctor] properties.
 
+<!-- eslint-disable id-length -->
+
 ```javascript
 var defineProperty = require( '@stdlib/utils-define-property' );
 var hasSymbolSupport = require( '@stdlib/assert-has-symbol-support' );
@@ -102,6 +104,8 @@ symbols = inheritedNonEnumerablePropertySymbols( f );
 ```
 
 By default, the function walks an object's entire prototype chain. To limit the inheritance level, provide a `level` argument.
+
+<!-- eslint-disable id-length -->
 
 ```javascript
 var symbols = inheritedNonEnumerablePropertySymbols( [], 1 );
@@ -225,11 +229,6 @@ For more information on the project, filing bug reports and feature requests, an
 
 ---
 
-## License
-
-See [LICENSE][stdlib-license].
-
-
 ## Copyright
 
 Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
@@ -272,8 +271,6 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [umd-url]: https://github.com/stdlib-js/utils-inherited-nonenumerable-property-symbols/tree/umd
 [esm-url]: https://github.com/stdlib-js/utils-inherited-nonenumerable-property-symbols/tree/esm
 [branches-url]: https://github.com/stdlib-js/utils-inherited-nonenumerable-property-symbols/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-inherited-nonenumerable-property-symbols/main/LICENSE
 
 [ecma-262-for-in]: https://262.ecma-international.org/5.1/#sec-12.6.4
 
